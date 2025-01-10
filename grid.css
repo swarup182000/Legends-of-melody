@@ -1,0 +1,146 @@
+
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    background-color: rgb(51, 51, 51);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header,
+footer {
+    background-color: rgb(33, 4, 4);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    /* Limit the max width */
+    box-sizing: border-box;
+}
+
+/* Gallery Styles */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+article {
+    background-color: rgb(35, 29, 29);
+    color: blanchedalmond;
+    line-height: 1.5;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid black;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+article h3 {
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+hr {
+    border: 1px solid blueviolet;
+    margin: 0.5rem 0;
+}
+
+.falguni img {
+
+    height: 62%;
+
+}
+
+
+
+.falguni article {
+
+    height: 35.5%;
+
+}
+
+.rahat img {
+
+height: 62%;
+
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr;
+        /* Stack images in one column */
+        gap: 0.5rem;
+    }
+
+    article {
+        padding: 0.5rem;
+    }
+
+    
+.falguni img {
+
+height: 50%;
+
+}
+
+.falguni article  {
+
+height:50%;
+
+}
+
+    .rahat img {
+
+height: 50%;
+/* width: 100%; */
+
+}
+
+
+    
+}
+
+@media (min-width: 1024px) {
+    .main-content {
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        /* Display 3 columns */
+    }
+
+}

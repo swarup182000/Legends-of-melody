@@ -1,0 +1,95 @@
+
+
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family:'Times New Roman', Times, serif\;
+}
+
+hr{
+
+width: 70%;
+margin-right: 80px;
+
+}
+
+header, footer {
+    background-color: #210404;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.container {
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+
+    /* margin-top: 80px; */
+}
+
+
+
+.grid-section {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.photo-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.blog-layout {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+ article {
+    background-color: #231d1d;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid black;
+    color: blanchedalmond;
+    line-height: 25px;
+}
+
+article h3{
+
+color: blueviolet;
+font-weight: bold;
+font-size: 25px;
+
+}
+
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .main-content {
+        margin: 0;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .hero {
+        flex: 2;
+        padding: 4rem;
+    }
+
+    .grid-section {
+        flex: 3;
+        padding: 2rem;
+    }
+}

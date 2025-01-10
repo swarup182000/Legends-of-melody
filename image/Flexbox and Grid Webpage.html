@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://127.0.0.1:5500/task%202%20module%201/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox and Grid Webpage</title>
+    <link rel="stylesheet" href="./Flexbox and Grid Webpage_files/grid.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Legends of melody</h1>
+        </header>
+   
+        <div class="main-content">
+
+            <section class="grid-section photo-gallery">
+                <img src="./Flexbox and Grid Webpage_files/honey-singh-1.avif" alt="Photo 1">
+                <article>
+                    <h3>Honey Singh <hr></h3>
+                    <p>
+                        Yo Yo Honey Singh is a popular Indian rapper, singer, and music producer known for
+                        revolutionizing Indian music with his catchy beats and fusion of hip-hop and desi styles. Famous
+                        for tracks like "Brown Rang" and "Lungi Dance," he has become a trendsetter in the Indian music
+                        industry.</p>
+                </article>
+
+
+                <img src="./Flexbox and Grid Webpage_files/sonu.jpg" alt="Photo 1">
+                <article>
+                    <h3>Sonu Nigam  <hr></h3>
+                    <p>Sonu Nigam is a legendary Indian playback singer celebrated for his melodious voice and
+                        remarkable versatility across languages and genres. With iconic songs like "Kal Ho Naa Ho" and
+                        "Abhi Mujh Mein Kahin," he has left an indelible mark on the Indian music industry.</p>
+                </article>
+
+                <img src="./Flexbox and Grid Webpage_files/7-1.jpg" alt="Photo 1">
+                <article>
+                    <h3>Shreya Ghoshal  <hr></h3>
+                    <p>Shreya Ghoshal is a highly acclaimed Indian playback singer known for her melodious voice and
+                        exceptional versatility. With timeless hits like "Teri Ore" and "Sun Saathiya," she has won
+                        numerous awards and is a beloved figure in the world of music.</p>
+                </article>
+
+            </section>
+
+            <section class="grid-section photo-gallery">
+                <img src="./Flexbox and Grid Webpage_files/National_Awards_B_Praak_(cropped).jpg" alt="Photo 1">
+                <article>
+                    <h3>B Praak  <hr></h3>
+                    <p>B Praak is an Indian singer, music director, and composer known for his powerful vocals and
+                        emotionally stirring songs. Gaining fame with hits like "Teri Mitti" and "Filhall," he has
+                        become a prominent figure in Punjabi and Bollywood music.</p>
+                </article>
+                <img src="./Flexbox and Grid Webpage_files/Falguni-Pathak-rise-to-fame.jpg" alt="Photo 1">
+                <article>
+                    <h3>Falguni Pathak  <hr></h3>
+                    <p>Falguni Pathak is a celebrated Indian singer and performer, known as the "Dandiya Queen" for her
+                        iconic Garba and Navratri songs. With timeless hits like "Maine Payal Hai Chhankai" and "Yaad
+                        Piya Ki Aane Lagi," she has charmed audiences with her melodious voice and vibrant stage
+                        presence.</p>
+                </article>
+                <img src="./Flexbox and Grid Webpage_files/Rahat-Fateh-Ali-Khan5.png" alt="Photo 1">
+                <article>
+                    <h3> Rahat Fateh Ali Khan  <hr></h3>
+                    <p>
+                        Rahat Fateh Ali Khan is a legendary Pakistani singer, renowned for his soul-stirring renditions
+                        of qawwalis, ghazals, and Bollywood songs. A disciple of the iconic Nusrat Fateh Ali Khan, his
+                        hits like "Tere Mast Mast Do Nain" and "Afreen Afreen" have earned him global acclaim.</p>
+                </article>
+
+            </section>
+
+        </div>
+        <footer>
+            <p>© 2025 Responsive Layout. All rights reserved.</p>
+        </footer>
+    </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

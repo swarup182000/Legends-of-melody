@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Planet</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <style>
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 2px 2px 10px #bcafaf;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links .pdf a {
+  text-decoration: none;
+  color: rgb(74, 165, 68);
+  font-size: 20px;
+  transition: color 0.3s;
+}
+/* 
+.nav-links a:hover {
+    color: #00bcd4;
+} */
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background-color: rgb(5, 4, 4);
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+}
+
+.upload li a {
+  margin: 5px 5px;
+  /* background: red; */
+  padding: 10px 30px;
+  border-radius: 15px;
+  border: 2px solid black;
+  text-decoration: none;
+  color: black;
+}
+
+/* ====main=== */
+
+.main {
+  padding: 80px;
+  display: flex;
+  gap: 20px;
+}
+
+.main h1 {
+  color: white;
+  border-radius: 50%;
+  border: 1px;
+  background: skyblue;
+  padding: 3px 12px;
+}
+
+.main h4 {
+  margin-top: 20px;
+}
+
+.discription {
+  display: flex;
+  width: 80%;
+  gap: 40px;
+  margin: 0 80px;
+}
+
+.discription p {
+  flex-wrap: wrap;
+}
+
+.discription img {
+  width: 100px;
+  height: 80%;
+}
+
+.message {
+  display: flex;
+  /* justify-content: center; */
+  margin-bottom: 10px;
+  /* color: blue; */
+  margin-top: 20%;
+  margin-left: 100px;
+  gap: 5px;
+}
+
+.message input {
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.icon {
+  /* margin-top: 10px; */
+  /* border: solid black; */
+  /* background: rgb(129, 129, 171); */
+  border-radius: 30px;
+  padding: 10px 10px;
+  color: rgb(19, 9, 114);
+}
+
+.icon i {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    /* display: flex; */
+    width: 100%;
+  }
+
+  .pdf li a {
+    width: 100%;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  .upload li a {
+    display: none;
+  }
+
+  .upload li i {
+    margin-left: 20px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  .pdf li a {
+    font-size: 5px;
+  }
+
+  .pdf li a i {
+    padding: 2px;
+    border: solid 1px rgb(76, 208, 65);
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 50px 50px;
+  }
+
+  .discription {
+    display: flex;
+    margin: 0 50px;
+    /* flex-wrap: wrap; */
+    width: 80%;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .message {
+    margin-left: 60px;
+    /* gap: 10px; */
+    margin-top: 40px;
+  }
+}
+
+/* Default styles for desktop */
+#upload-btn-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* For mobile view */
+  #upload-btn-desktop {
+      display: none;
+  }
+
+  #upload-btn-mobile {
+      display: block;
+  }
+}
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><img src="/AI Planet Logo.png" alt=""></div>
+        <ul class="nav-links">
+            <div class="pdf">
+                <li><a href="#"><i class='bx bx-file-blank'></i> demo.pdf</a></li>
+            </div>
+            <div class="pdf">
+                <li id="upload-btn-desktop">
+                    <i class='bx bx-plus-circle'></i>
+                    <a href="#" id="upload-link">Upload PDF</a>
+                </li>
+            </div>
+            <div class="upload">
+                <li id="upload-btn-mobile">
+                    <i class='bx bx-plus-circle'></i>
+                </li>
+            </div>
+            <input type="file" id="file-input" accept=".pdf" style="display: none;">
+        </ul>
+    </nav>
+
+    <div class="main">
+        <h1>S</h1>
+        <h4>explain like in 5</h4>
+    </div>
+
+    <div class="discription">
+        <img src="/Frame 1000003278 (2) 2.png" alt="">
+        <p>
+            Our own Large Language Model (LLM) is a type of AI that can learn from data. We have trained it on 7 billion
+            parameters, making it better than other LLMs. We are featured on aiplanet.com and work with leading
+            enterprises to help them use AI securely and privately. Our Generative AI Stack reduces hallucinations in LLMs and
+            allows enterprises to use AI in their applications.
+        </p>
+    </div>
+
+    <div class="message">
+        <input type="text" placeholder="Send Message">
+        <div class="icon">
+            <i class='bx bxs-paper-plane'></i>
+        </div>
+    </div>
+
+    <script>
+        // Get the buttons and file input
+        const uploadBtnDesktop = document.getElementById('upload-btn-desktop');
+        const uploadBtnMobile = document.getElementById('upload-btn-mobile');
+        const fileInput = document.getElementById('file-input');
+
+        // Function to handle file upload
+        const handleFileUpload = (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    const fileData = {
+                        name: file.name,
+                        size: file.size,
+                        type: file.type,
+                        content: reader.result // Base64 file content
+                    };
+
+                    // Save file data to local storage
+                    const existingFiles = JSON.parse(localStorage.getItem('uploadedFiles')) || [];
+                    existingFiles.push(fileData);
+                    localStorage.setItem('uploadedFiles', JSON.stringify(existingFiles));
+
+                    alert(`File "${file.name}" uploaded and saved!`);
+                };
+                reader.readAsDataURL(file); // Read file as Base64
+            }
+        };
+
+        // Attach click listeners to buttons
+        uploadBtnDesktop.addEventListener('click', (e) => {
+            e.preventDefault();
+            fileInput.click();
+        });
+
+        uploadBtnMobile.addEventListener('click', (e) => {
+            e.preventDefault();
+            fileInput.click();
+        });
+
+        // Attach change listener to file input
+        fileInput.addEventListener('change', handleFileUpload);
+    </script>
+
+</body>
+
+</html>

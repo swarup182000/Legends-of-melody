@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Example</title>
+</head>
+
+<body>
+    <h1>Upload and Save to Local Storage</h1>
+    <input type="file" id="fileInput">
+    <button id="saveButton">Save to Local Storage</button>
+    <button id="loadButton">Load from Local Storage</button>
+    <p id="display"></p>
+
+
+    <script>
+
+        // Select DOM elements
+        const fileInput = document.getElementById('fileInput');
+        const saveButton = document.getElementById('saveButton');
+        const loadButton = document.getElementById('loadButton');
+        const display = document.getElementById('display');
+
+        // Save file name to local storage
+        saveButton.addEventListener('click', () => {
+            const file = fileInput.files[0];
+            if (file) {
+                localStorage.setItem('uploadedFileName', file.name);
+                alert(`File "${file.name}" saved to local storage.`);
+            } else {
+                alert('Please select a file first.');
+            }
+        });
+
+        // Load file name from local storage
+        loadButton.addEventListener('click', () => {
+            const savedFileName = localStorage.getItem('uploadedFileName');
+            if (savedFileName) {
+                display.textContent = `Saved File: ${savedFileName}`;
+            } else {
+                display.textContent = 'No file found in local storage.';
+            }
+        });
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
